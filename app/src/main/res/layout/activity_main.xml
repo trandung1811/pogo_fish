@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/teal_700">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:text="@string/title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ACACAC"
+            android:foregroundTint="#F8F8F8"
+            android:text="@string/start_button"
+            android:textColor="#000000"
+            app:iconTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/how_to_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ACACAC"
+            android:text="@string/how_to_button"
+
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/credits_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ACACAC"
+            android:text="@string/credits_button"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+</LinearLayout>

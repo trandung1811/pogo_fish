@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Pogo Fish</string>
+    <string name="title">Pogo Fish</string>
+    <string name="start_button">Start</string>
+    <string name="how_to_button">How To</string>
+    <string name="credits_button">Credits</string>
+    <string name="next_button">Next</string>
+    <string name="prev_button">Prev</string>
+    <string name="back_to_main_button">Main Menu</string>
+    <string name="how_to_title">How To Play</string>
+    <string name="instruction_pogo">Pogo is a fish trying to get to outer space! Help Pogo achieve his dream by avoiding obstacles and reaching higher heights! </string>
+    <string name="instruction_move">To move Pogo, press your finger down on the screen for Pogo to lunge up and towards the direction of your finger.</string>
+    <string name="instruction_obtsacles">While moving upwards, make sure you avoid obstacles like _______</string>
+    <string name="instruction_power_ups">Power ups can help or harm Pogo in his journey to outer space..</string>
+    <string name="instruction_ready">Ready for your adventure?</string>
+    <string name="credits_title">Pogo Fish Credits</string>
+    <string name="credits_header">Created By</string>
+    <string name="pogo_fish_credits">Pogo Fish Credits</string>
+    <string name="created_by">Created By:</string>
+    <string name="kimmy">Kimmy Thach</string>
+    <string name="longnghi">LongNghi Vo</string>
+    <string name="cuong">Cuong Nguyen</string>
+    <string name="semester_course">Spring 2021 — CSC 567</string>
+</resources>
