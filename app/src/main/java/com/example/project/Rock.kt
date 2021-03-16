@@ -3,38 +3,46 @@ package com.example.project
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.util.Log
-import kotlin.random.Random
+import android.graphics.Rect
 
-class Rock {
-    private lateinit var rock_1: Bitmap
-    private lateinit var rock_2: Bitmap
-    private lateinit var rock_3: Bitmap
-    private lateinit var gameView: GameView
-    var width = 0
-    var height = 0
 
-    fun createRock(gameView: GameView, screen_x: Int, screen_y: Int, res: Resources) {
-
-        this.gameView = gameView;
-        rock_1 = BitmapFactory.decodeResource(res,R.drawable.obstacle1)
-        rock_2 = BitmapFactory.decodeResource(res,R.drawable.obstacle2)
-        rock_3 = BitmapFactory.decodeResource(res,R.drawable.obstacle3)
-        width = screen_x/4
-        height = screen_y/10
-
-        rock_1 = Bitmap.createScaledBitmap(rock_1,width, height, false)
-        rock_2 = Bitmap.createScaledBitmap(rock_2,width, height, false)
-        rock_3 = Bitmap.createScaledBitmap(rock_3,width, height, false)
-
-    }
-    fun getRock(rand: Int) : Bitmap {
-        when (rand) {
-            0 -> return rock_1
-            1 -> return rock_2
-            2 -> return rock_3
+class Rock (res: Resources, counter: Int, screenX: Int, screenY: Int) {
+    var speed = 10
+    var x = 0
+    var y: Int
+    var width: Int
+    var height: Int
+    val counter = counter
+    var object1: Bitmap
+    var object2: Bitmap
+    var object3: Bitmap
+    val objects: Bitmap
+        get() {
+            if (counter == 1) {
+                return object1
+            }
+            if (counter == 2) {
+                return object2
+            }
+            if (counter == 3) {
+                return object3
+            }
+            return object3
         }
-        return rock_1
-    }
 
+    init {
+
+
+        object1 = BitmapFactory.decodeResource(res, R.drawable.obstacle1)
+        object2 = BitmapFactory.decodeResource(res, R.drawable.obstacle2)
+        object3 = BitmapFactory.decodeResource(res, R.drawable.obstacle3)
+
+        width = screenX/7
+        height = screenY/12
+
+        object1 = Bitmap.createScaledBitmap(object1, width, height, false)
+        object2 = Bitmap.createScaledBitmap(object2, width, height, false)
+        object3 = Bitmap.createScaledBitmap(object3, width, height, false)
+        y = -2*height
+    }
 }

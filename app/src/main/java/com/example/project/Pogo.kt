@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.RectF
-import com.example.project.GameView.Companion.screenRatioX
 
 class Pogo(context: Context,
            private var screenX: Int,
@@ -14,10 +13,10 @@ class Pogo(context: Context,
 
     val width: Float = screenX / 7.0f
     val height: Float = screenY / 9.0f
-
+    var screenRatioX = 1920f / screenX
     val position: RectF = RectF(
-            64 * screenRatioX + 20f,
-            (screenY /2).toFloat() - width,
+            (screenX/2).toFloat(),
+            screenY - height - 300.0f,
         screenX / 2.0f + width,
         screenY.toFloat() - 100.0f
     )
